@@ -1,44 +1,57 @@
-title: Your awesome title
-email: your-email@domain.com
-description: description
-baseurl: /Jekyll-Avalon
-url: http://joshuaavalon.github.io
-twitter_username: joshuaavalon
-github_username:  joshuaavalon
+# Site settings
+title: Hanuman
+description: Hanuman is a minimal yet powerful Jekyll theme for your blogs and websites.
+cover: assets/images/radhakrishna.jpg
+logo: assets/images/logo.png
+favicon: assets/images/favicon.png
+baseurl: "/hanuman/" # the subpath of your site, e.g. /blog/ or / for root
+url: "https://samanyougarg.com" # the base hostname & protocol for your site
+paginate:	5 # The number of posts to show per page on your homepage
 
-sass:
-  style: compressed
+# Social
+facebook: facebook
+twitter: twitter
+github:  github
 
-paginate: 12
-paginate_path: "/:num/"
+#Additional Pages
+about: about
+contact: contact
+privacy-policy: privacy-policy
 
-author_img_s: /img/author_s.png
-author_img: /img/author.png
 
-navigation:
-  - text: Home
-    url: /
-  - text: Categories
-    url: /categories.html
-  - text: Tags
-    url: /tags.html
+permalink: /:title
 
-read_more: Read More
-env: production
-minify_html: false # Set to true only when it is production. Increase significant build time.
+
+# Google Analytics
+analytics_id: ""
 
 # Build settings
 markdown: kramdown
 
-sticky: sticky # Tag used for sticky post
-sticky_count: 3 # Number of sticky post shown
+kramdown:
+  parse_block_html: true
 
-gems:
+plugins:
   - jekyll-paginate
-  - jekyll-feed
-  
+
+
+# Settings for rake task
+safe: False
+lsi: False
+username: samanyougarg #github username
+repo: hanuman #github repository
+branch: master #branch
+relative_source: ../hanuman/ #source directory
+destination: ../hanuman-pages/ #destination directory
+production_url:  https://samanyougarg.com/
+source_url:  https://github.com/samanyougarg/hanuman #source repository url
+
 exclude:
+  - README.md
+  - Rakefile
   - Gemfile
   - Gemfile.lock
-  - README.md
-  - LICENSE
+  - changelog.md
+  - "*.Rmd"
+  - vendor
+  - .travis.yml
